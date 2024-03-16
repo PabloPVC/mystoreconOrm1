@@ -16,7 +16,7 @@ export const databaseProviders = [
         entities: [__dirname + '/../**/*.entity{.ts,.js}'],
         migrations: [__dirname + '/migrations/*{.ts,.js}'],
         database: config.get(Configuration.DATABASE),
-        synchronize: false,
+        synchronize: true,
       };
     },
   }),
