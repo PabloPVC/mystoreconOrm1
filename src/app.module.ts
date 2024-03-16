@@ -52,7 +52,8 @@ import { join } from 'path';
 export class AppModule {
   static port: number | string;
   constructor(private readonly _configServices: ConfigService) {
-    AppModule.port = this._configServices.get(Configuration.PORT);
+    AppModule.port =
+      process.env.PORT || this._configServices.get(Configuration.PORT);
     console.log('***********');
     console.log(AppModule.port);
   }
