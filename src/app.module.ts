@@ -52,10 +52,10 @@ import { join } from 'path';
 export class AppModule {
   static port: number | string;
   constructor(private readonly _configServices: ConfigService) {
-    AppModule.port =
-      process.env.PORT || this._configServices.get(Configuration.PORT);
     console.log('***********');
     console.log(process.env.PORT);
     console.log('***********');
+    AppModule.port =
+      process.env.PORT || this._configServices.get(Configuration.PORT);
   }
 }
