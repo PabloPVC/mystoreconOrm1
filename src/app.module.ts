@@ -55,6 +55,7 @@ export class AppModule {
     AppModule.port =
       process.env.PORT || this._configServices.get(Configuration.PORT);
     console.log('***********');
-    console.log(AppModule.port);
+    console.log(process.env.PORT);
+    console.log('***********');
   }
 }
